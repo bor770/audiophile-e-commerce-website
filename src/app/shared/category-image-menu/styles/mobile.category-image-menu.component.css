@@ -1,0 +1,16 @@
+.mobile {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile .main-img {
+  margin-bottom: -3.25rem;
+}
+
+.mobile .background {
+  padding-bottom: 1.38rem;
+}
+
+.mobile .shadow {
+  height: 14px;
+}

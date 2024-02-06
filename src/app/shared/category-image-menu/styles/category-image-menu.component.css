@@ -1,0 +1,13 @@
+nav {
+  display: flex;
+}
+
+img {
+  display: block;
+  margin-inline: auto;
+}
+
+.background {
+  background: #f1f1f1;
+  border-radius: 8px;
+}

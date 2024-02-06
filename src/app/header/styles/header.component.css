@@ -1,6 +1,15 @@
-.container {
+nav {
   align-items: center;
   background: #191919;
   display: flex;
   justify-content: space-between;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.burger-icon {
+  display: block;
 }

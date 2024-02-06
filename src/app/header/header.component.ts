@@ -1,12 +1,20 @@
+import { CdkMenuModule } from '@angular/cdk/menu';
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { LetDirective } from '@ngrx/component';
 
 import { BaseComponent } from '../shared/base/base.component';
+import { CategoryImageMenuComponent } from '../shared/category-image-menu/category-image-menu.component';
 
 @Component({
-  imports: [NgClass, NgIf, LetDirective],
+  imports: [
+    CdkMenuModule,
+    NgClass,
+    NgIf,
+    LetDirective,
+    CategoryImageMenuComponent,
+  ],
   selector: 'app-header',
   standalone: true,
   styleUrls: [

@@ -1,9 +1,18 @@
-<div *ngrxLet="width$ as width" [ngClass]="width" class="container">
-  <img
+<nav *ngrxLet="width$ as width" [ngClass]="width">
+  <button
     *ngIf="width === 'mobile' || width === 'tablet'"
-    alt="Burger Icon"
-    src="../../assets/images/shared/tablet/icon-hamburger.svg"
-  />
+    [cdkMenuTriggerFor]="menu"
+  >
+    <img
+      alt="Burger Icon"
+      class="burger-icon"
+      src="../../assets/images/shared/tablet/icon-hamburger.svg"
+    />
+  </button>
   <img alt="Logo" src="../../assets/images/shared/desktop/logo.svg" />
   <img alt="Cart Icon" src="../../assets/images/shared/desktop/icon-cart.svg" />
-</div>
+</nav>
+
+<ng-template #menu>
+  <app-category-image-menu></app-category-image-menu>
+</ng-template>
