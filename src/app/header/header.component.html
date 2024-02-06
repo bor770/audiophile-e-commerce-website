@@ -1,1 +1,9 @@
-<p>header works!</p>
+<div *ngrxLet="width$ as width" [ngClass]="width" class="container">
+  <img
+    *ngIf="width === 'mobile' || width === 'tablet'"
+    alt="Burger Icon"
+    src="../../assets/images/shared/tablet/icon-hamburger.svg"
+  />
+  <img alt="Logo" src="../../assets/images/shared/desktop/logo.svg" />
+  <img alt="Cart Icon" src="../../assets/images/shared/desktop/icon-cart.svg" />
+</div>

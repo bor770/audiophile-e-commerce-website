@@ -1,0 +1,6 @@
+.container {
+  align-items: center;
+  background: #191919;
+  display: flex;
+  justify-content: space-between;
+}
