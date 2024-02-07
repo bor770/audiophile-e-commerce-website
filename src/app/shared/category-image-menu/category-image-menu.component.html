@@ -3,10 +3,13 @@
     <img
       class="main-img"
       [alt]="mainImgAlt(category)"
-      [src]="mainImgSrc(category, width)"
+      [ngStyle]="{
+        marginBottom: widths[category].marginBottom,
+        width: widths[category].width
+      }"
+      [src]="mainImgSrc(category)"
     />
     <div class="background">
-      <img alt="Shadow" class="shadow" [src]="shadowImgSrc(width)" />
       <span class="name">{{ category }}</span>
       <div class="shop">
         <span class="shop-word">SHOP</span>

@@ -1,5 +1,5 @@
 import { CdkMenuModule } from '@angular/cdk/menu';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { LetDirective } from '@ngrx/component';
@@ -9,7 +9,7 @@ import { Category, categories } from '../data/categories.data';
 import { Width } from '../layout/layout.model';
 
 @Component({
-  imports: [CdkMenuModule, NgClass, NgFor, LetDirective],
+  imports: [CdkMenuModule, NgClass, NgFor, NgStyle, LetDirective],
   selector: 'app-category-image-menu',
   standalone: true,
   styleUrls: [
@@ -22,13 +22,19 @@ import { Width } from '../layout/layout.model';
 })
 export class CategoryImageMenuComponent extends BaseComponent {
   categories = categories;
+  widths: { [category in Category]: { marginBottom: string; width: string } } =
+    {
+      earphones: { marginBottom: `-3.81rem`, width: `11.51rem` },
+      headphones: { marginBottom: `-5.49rem`, width: `9.2rem` },
+      speakers: { marginBottom: `-6.02rem`, width: `9.74rem` },
+    };
 
   mainImgAlt(category: Category) {
     return `${category} image`;
   }
 
-  mainImgSrc(category: Category, width: Width) {
-    return `../../../assets/images/menu/${width}-${category}.png`;
+  mainImgSrc(category: Category) {
+    return `../../../assets/images/shared/desktop/image-category-thumbnail-${category}.png`;
   }
 
   shadowImgSrc(width: Width) {

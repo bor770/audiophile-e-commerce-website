@@ -3,16 +3,8 @@
   gap: 1rem;
 }
 
-.mobile .main-img {
-  margin-bottom: -3.25rem;
-}
-
 .mobile .background {
-  padding-bottom: 1.38rem;
-}
-
-.mobile .shadow {
-  margin-block: -2px -10px;
+  padding-block: 5.5rem 1.38rem;
 }
 
 .mobile .name {
