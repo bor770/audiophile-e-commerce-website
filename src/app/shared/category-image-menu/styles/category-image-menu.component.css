@@ -1,5 +1,11 @@
 nav {
+  font-weight: 700;
   display: flex;
+}
+
+a {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 img {
@@ -10,4 +16,24 @@ img {
 .background {
   background: #f1f1f1;
   border-radius: 8px;
+}
+
+.name {
+  display: block;
+}
+
+.shop {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 13.32px;
+}
+
+.shop-word {
+  font-size: 0.81rem;
+  letter-spacing: 1px;
+}
+
+.arrow {
+  margin: 0;
 }

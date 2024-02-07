@@ -23,11 +23,15 @@ import { Width } from '../layout/layout.model';
 export class CategoryImageMenuComponent extends BaseComponent {
   categories = categories;
 
-  imgAlt(category: Category) {
+  mainImgAlt(category: Category) {
     return `${category} image`;
   }
 
-  imgSrc(category: Category, width: Width) {
+  mainImgSrc(category: Category, width: Width) {
     return `../../../assets/images/menu/${width}-${category}.png`;
+  }
+
+  shadowImgSrc(width: Width) {
+    return `../../../assets/images/menu/${width}-shadow.svg`;
   }
 }

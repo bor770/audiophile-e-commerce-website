@@ -2,16 +2,17 @@
   <a *ngFor="let category of categories" cdkMenuItem>
     <img
       class="main-img"
-      [alt]="imgAlt(category)"
-      [src]="imgSrc(category, width)"
+      [alt]="mainImgAlt(category)"
+      [src]="mainImgSrc(category, width)"
     />
     <div class="background">
-      <img alt="Shadow" src="../../../assets/images/menu/shadow.svg" />
+      <img alt="Shadow" class="shadow" [src]="shadowImgSrc(width)" />
       <span class="name">{{ category }}</span>
       <div class="shop">
         <span class="shop-word">SHOP</span>
         <img
           alt="Right Arrow Icon"
+          class="arrow"
           src="../../../assets/images/shared/desktop/icon-arrow-right.svg"
         />
       </div>
