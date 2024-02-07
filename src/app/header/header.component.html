@@ -1,6 +1,7 @@
 <nav *ngrxLet="width$ as width" [ngClass]="width">
   <button
     *ngIf="width === 'mobile' || width === 'tablet'"
+    [cdkMenuPosition]="position"
     [cdkMenuTriggerFor]="menu"
   >
     <img
@@ -14,5 +15,5 @@
 </nav>
 
 <ng-template #menu>
-  <app-category-image-menu></app-category-image-menu>
+  <app-burger-menu></app-burger-menu>
 </ng-template>
